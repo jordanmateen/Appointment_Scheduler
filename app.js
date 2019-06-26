@@ -5,6 +5,8 @@ const app = express();
 
 
 const mongoose = require('mongoose')
+
+//db path 
 let dbpath = 'mongodb://appt:appt123@ds149593.mlab.com:49593/appointments'
 
 //let dbpath = 'mongodb://chatroom:1chatroom@ds153824.mlab.com:53824/chatroom'
@@ -31,15 +33,16 @@ app.all('/*', function(req, res, next) {
   }
 });
 
-
+//middleware for app after cors is checked
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/api', routes)// localhost:2340/api
 
 
-
+//Port opend at 2341
 const PORT = 2341;
 
+//prompts listening when server is running
 app.listen(PORT, ()=>{
   console.log(`Your server is running on PORT ${PORT}`)
 })

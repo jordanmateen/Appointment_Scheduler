@@ -1,5 +1,6 @@
 const Appointment = require('../model/formModel')
 
+//controller for appoinment creation
 exports.appointment_create = function (req, res) {
     let product = new Appointment(
         {
