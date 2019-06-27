@@ -24,7 +24,7 @@ class ApptApp extends Component {
         return (
              <div>
               { isShowing ? <div onClick={this.handleClose} className="back-drop"></div> : null }
-                <h1>Scgedule your appointment below</h1>
+                <h1>Schedule your appointment below</h1>
                 {timeSlot}
                 <FormModal className="modal"
                     show={isShowing}
