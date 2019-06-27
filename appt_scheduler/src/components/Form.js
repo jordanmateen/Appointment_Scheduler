@@ -20,7 +20,7 @@ class Form extends Component {
     //submit alert when appointment is set.
     handleSubmit(event) {
      let {name , apptTime , phone} = this.props
-      alert(`${name}, your appointment submitted Sucessfully  for ${phone}`);
+      alert(`${name}, your appointment submitted Sucessfully  for ${apptTime}`);
       event.preventDefault();
 
       const body = {
